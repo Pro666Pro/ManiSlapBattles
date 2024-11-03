@@ -12,7 +12,7 @@ end
 local GameName = "Mani Slap Battles - by nexer"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({IntroText = "cool", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+local Window = OrionLib:MakeWindow({IntroText = "lool", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
 
 OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
 
@@ -22,7 +22,7 @@ local Script = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Script:AddToggle({
+Script:AddButton({
 	Name = "Teleport Safe Spot",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
