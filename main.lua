@@ -12,7 +12,7 @@ end
 local GameName = "Mani Slap Battles - by nexer"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({IntroText = "lool", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+local Window = OrionLib:MakeWindow({IntroText = "lool v2", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
 
 OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
 
@@ -160,7 +160,7 @@ game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(ar
 game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
 game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
 game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
-task.wait(0.00000001)
+task.wait(0.01)
 end
 	 end
 })
