@@ -12,7 +12,7 @@ local Script = Window:MakeTab({
 })
 
 Script:AddToggle({
-	Name = "Slap Dummy",
+	Name = "Slap Dummy { equip dual }",
   Default = false,
 	Callback = function(Value)
 SlapDummy = Value
