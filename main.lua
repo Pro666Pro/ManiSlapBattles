@@ -1,7 +1,18 @@
+if workspace:FindFirstChild("Baseplate") == nil then
+local S = Instance.new("Part")
+S.Name = "Baseplate"
+S.Anchored = true
+S.CanCollide = true
+S.Transparency = 0
+S.Position = Vector3.new(-7000, -7000, -7000)
+S.Size = Vector3.new(1000, 10, 1000)
+S.Parent = workspace
+end
+
 local GameName = "Mani Slap Battles - by nexer"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({IntroText = "fr", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+local Window = OrionLib:MakeWindow({IntroText = "cool", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
 
 OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
 
@@ -9,6 +20,13 @@ local Script = Window:MakeTab({
 	Name = "Farm Section",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+Script:AddToggle({
+	Name = "Teleport Safe Spot",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+	 end
 })
 
 Script:AddToggle({
