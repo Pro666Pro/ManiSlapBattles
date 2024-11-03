@@ -36,3 +36,29 @@ task.wait(0.00000001)
 end
 	 end
 })
+
+Script:AddToggle({
+	Name = "Slap Reverse Dummy { equip dual }",
+  Default = false,
+	Callback = function(Value)
+SlapDummy = Value
+while SlapDummy == true do
+local args = {
+    [1] = "slash",
+    [2] = workspace.Dummies.RDummy,
+    [3] = Vector3.new(0, 0, 0)
+}
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.Dual.Event:FireServer(unpack(args))
+task.wait(0.00000001)
+end
+	 end
+})
